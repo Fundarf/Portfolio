@@ -1,0 +1,130 @@
+.binfo{
+    display: none;
+}
+
+@media (max-width:600px) {
+    .line{
+        border-radius: 19%;
+        height: 7px;
+        width: 35px;
+        background-color: black;
+    }
+
+    .line_active{
+        display: block;
+    }
+
+    .line_inactive{
+        display: none;
+    }
+
+    .lineC{
+        transform: rotate(45deg);
+        height: 7px;
+        top: 10px;
+        width: 35px;
+        background-color: black;
+        position: absolute;
+        border-radius: 19%;
+    }
+
+    .lineC_active{
+        display: block;
+    }
+
+    .lineC_inactive{
+        display: none;
+    }
+
+    .lineC:nth-child(even){
+        transform: rotate(-45deg);
+    }
+
+    .burger{
+        position: fixed;
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        border: none;
+        z-index: 1;
+        top: 20px;
+        right: 29px;
+        width: 35px;
+        height: 27px;
+    }
+
+    .binfo{
+        display: block;
+        background-color: #fff;
+        width: 100vw;
+        height: 100vh;
+        transform: translateY(-110vh);
+        position: absolute;
+        top: 20px;
+        left: 0;
+        transition: all 500ms;
+    }
+
+    .binfoActive{
+        position: fixed;
+        transform: translateY(0);
+        top: 0;
+    }
+
+    .binfo ul{
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        padding-top: 37px;
+        gap: 30px;
+    }
+
+    .binfo li{
+        list-style-type: none;
+        padding-left: 26px;
+    }
+
+    .binfo a{
+        font-weight: 700;
+        font-size: 34px;
+        color: #828282;
+        text-decoration: none;
+        transition: 500ms;
+    }
+
+    .binfo a:hover{
+        color: #090909;
+    }
+
+    .switchLanguageButton{
+        border: none;
+        background-color: white;
+    }
+    
+    .switchLanguageB span, .switchLanguageB a{
+        text-decoration: none;
+        writing-mode: vertical-lr;
+        font-size: 22px;
+        color: #828282;
+        transform: rotate(-180deg);
+        transition: all 500ms;
+    }
+    
+    .switchLanguageB span:nth-child(even){
+        color: black;
+    }
+    
+    .switchLanguageB span, .switchLanguageB a:nth-child(odd):hover{
+        cursor: pointer;
+        color: black;
+    }
+    
+    .switchLanguageB{
+        display: flex;
+        align-items: flex-end;
+        padding-right: 28px;
+        flex-direction: column;
+        gap: 5px;
+    }
+}
